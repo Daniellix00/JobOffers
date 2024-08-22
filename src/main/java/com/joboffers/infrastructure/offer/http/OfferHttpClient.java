@@ -1,4 +1,4 @@
-package com.joboffers.infrastructure.offer;
+package com.joboffers.infrastructure.offer.http;
 
 
 import com.joboffers.domain.offer.OfferFetchable;
@@ -31,7 +31,7 @@ public class OfferHttpClient implements OfferFetchable {
         HttpHeaders headers = new HttpHeaders();
         final HttpEntity<HttpHeaders> requestEntity = new HttpEntity<>(headers);
         try {
-            String urlForService = getUrlForService("/asdakjdsnasjkldnaslkjdn");
+            String urlForService = getUrlForService("/offers");
             final String url = UriComponentsBuilder.fromHttpUrl(urlForService).toUriString();
             ResponseEntity<List<JobOfferResponse>> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, new ParameterizedTypeReference<>() {});
             final List<JobOfferResponse> body = response.getBody();
