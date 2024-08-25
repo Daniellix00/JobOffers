@@ -91,7 +91,7 @@ public void should_throw_not_found_exception_when_offer_not_found(){
     Throwable thrown = catchThrowable(() -> offerFacade.findOfferById("100"));
 
     //Then
-    AssertionsForClassTypes.assertThat(thrown).isInstanceOf(OffferNotFoundException.class).hasMessage("Offer with id 100 not found");
+    AssertionsForClassTypes.assertThat(thrown).isInstanceOf(OfferNotFoundException.class).hasMessage("Offer with id 100 not found");
 }
 @Test
 public void should_throw_duplicate_key_exception_when_with_offer_url_exists(){

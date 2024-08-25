@@ -3,7 +3,6 @@ package com.joboffers.domain.offer;
 import com.joboffers.domain.offer.dto.OfferRequestDto;
 import com.joboffers.domain.offer.dto.OfferResponseDto;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,7 +29,7 @@ public class OfferFacade {
     public OfferResponseDto findOfferById(String id){
         return offerRepository.findById(id)
                 .map(OfferMapper::mapFromOfferToOfferDto)
-                .orElseThrow(() -> new OffferNotFoundException(id));
+                .orElseThrow(() -> new OfferNotFoundException(id));
     }
     public OfferResponseDto saveOffer(OfferRequestDto offerDto){
         final  Offer offer = OfferMapper.mapFromOfferDtoToOffer(offerDto);
