@@ -3,6 +3,7 @@ package com.joboffers.domain.offer;
 import com.joboffers.domain.offer.dto.JobOfferResponse;
 import com.joboffers.domain.offer.dto.OfferRequestDto;
 import com.joboffers.domain.offer.dto.OfferResponseDto;
+import org.springframework.dao.DuplicateKeyException;
 import org.assertj.core.api.AssertionsForClassTypes;
 import org.junit.jupiter.api.Test;
 import java.util.List;
@@ -105,7 +106,7 @@ public void should_throw_duplicate_key_exception_when_with_offer_url_exists(){
     Throwable thrown = catchThrowable(() -> offerFacade.saveOffer(new OfferRequestDto("cx", "vc", "xcv", "hello.pl")));
 
     //Then
-    AssertionsForClassTypes.assertThat(thrown).isInstanceOf(OfferDuplicateException.class).hasMessage("Offer with offerUrl [hello.pl] already exists");
+    AssertionsForClassTypes.assertThat(thrown).isInstanceOf(DuplicateKeyException.class).hasMessage("Offer with offerUrl [hello.pl] already exists");
 }
 
 }
