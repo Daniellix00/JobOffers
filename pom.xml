@@ -22,6 +22,7 @@
         <wiremock-jre8.version>2.35.0</wiremock-jre8.version>
         <awaitility.version>4.0.3</awaitility.version>
         <springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
+        <java-jwt.version>4.0.0</java-jwt.version>
     </properties>
     <dependencies>
         <!--  SWAGGER http://localhost:8080/swagger-ui/index.html#/ -->
@@ -52,6 +53,16 @@
         <!--  SPRING BOOT -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
@@ -63,6 +74,18 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <!-- JWT -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>${java-jwt.version}</version>
+        </dependency>
+        <!-- CONFIGURATION_PROPERTIES -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
         <!--UNIT TESTS-->
         <dependency>
@@ -95,6 +118,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!-- CONFIGURATION_PROPERTIES -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
 
     </dependencies>
