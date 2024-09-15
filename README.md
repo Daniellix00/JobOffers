@@ -4,7 +4,7 @@ Job Offers is a Spring Boot-based web application designed to collect job listin
 
 The project integrates several technologies and tools to ensure efficient data gathering, processing, and security. It supports JWT-based authentication, scheduled job fetching, and offers a well-structured testing approach using both unit and integration tests. All services are containerized and easily deployable with Docker.
 
-This project helped me deepen my knowledge of modern Java and Spring Boot technologies, while also improving my experience with testing frameworks, DevOps practices, and teamwork. I have also implemented SCRUM-based workflows, participated in code reviews, and worked collaboratively with a teammate to ensure code quality and maintainability.
+This project helped me deepen my knowledge of modern Java and Spring Boot technologies, while also improving my experience with testing frameworks, DevOps practices. I have also implemented SCRUM-based workflows
 
 ## Specification
 
